@@ -19,6 +19,18 @@
 		09EA488D17BE49170026664E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EA487517BE49170026664E /* UIKit.framework */; };
 		09EA489517BE49170026664E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09EA489317BE49170026664E /* InfoPlist.strings */; };
 		09EA489717BE49170026664E /* OGExtensionsProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA489617BE49170026664E /* OGExtensionsProjectTests.m */; };
+		09EA496D17BE560B0026664E /* NSData+OGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA495117BE560B0026664E /* NSData+OGExtensions.m */; };
+		09EA496E17BE560B0026664E /* NSIndexPath+OGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA495317BE560B0026664E /* NSIndexPath+OGExtensions.m */; };
+		09EA497017BE560B0026664E /* NSNotificationCenter+OGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA495717BE560B0026664E /* NSNotificationCenter+OGExtensions.m */; };
+		09EA497117BE560B0026664E /* NSOperationQueue+OGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA495917BE560B0026664E /* NSOperationQueue+OGExtensions.m */; };
+		09EA497217BE560B0026664E /* NSString+OGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA495B17BE560B0026664E /* NSString+OGExtensions.m */; };
+		09EA497317BE560B0026664E /* OGExtensionsCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA495E17BE560B0026664E /* OGExtensionsCommon.m */; };
+		09EA497417BE560B0026664E /* OGExtensionsGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA496017BE560B0026664E /* OGExtensionsGeometry.m */; };
+		09EA497517BE560B0026664E /* UIApplication+OGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA496217BE560B0026664E /* UIApplication+OGExtensions.m */; };
+		09EA497617BE560B0026664E /* UIColor+OGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA496417BE560B0026664E /* UIColor+OGExtensions.m */; };
+		09EA497717BE560B0026664E /* UIDevice+OGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA496617BE560B0026664E /* UIDevice+OGExtensions.m */; };
+		09EA497917BE560B0026664E /* UIView+OGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA496A17BE560B0026664E /* UIView+OGExtensions.m */; };
+		09EA497A17BE560B0026664E /* UIWindow+OGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EA496C17BE560B0026664E /* UIWindow+OGExtensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +60,34 @@
 		09EA489217BE49170026664E /* OGExtensionsProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OGExtensionsProjectTests-Info.plist"; sourceTree = "<group>"; };
 		09EA489417BE49170026664E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		09EA489617BE49170026664E /* OGExtensionsProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OGExtensionsProjectTests.m; sourceTree = "<group>"; };
+		09EA48A017BE49890026664E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09EA48A217BE49890026664E /* OGExtensions.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = OGExtensions.podspec; sourceTree = "<group>"; };
+		09EA48A317BE49890026664E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		09EA495017BE560B0026664E /* NSData+OGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+OGExtensions.h"; sourceTree = "<group>"; };
+		09EA495117BE560B0026664E /* NSData+OGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+OGExtensions.m"; sourceTree = "<group>"; };
+		09EA495217BE560B0026664E /* NSIndexPath+OGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+OGExtensions.h"; sourceTree = "<group>"; };
+		09EA495317BE560B0026664E /* NSIndexPath+OGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+OGExtensions.m"; sourceTree = "<group>"; };
+		09EA495617BE560B0026664E /* NSNotificationCenter+OGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OGExtensions.h"; sourceTree = "<group>"; };
+		09EA495717BE560B0026664E /* NSNotificationCenter+OGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+OGExtensions.m"; sourceTree = "<group>"; };
+		09EA495817BE560B0026664E /* NSOperationQueue+OGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+OGExtensions.h"; sourceTree = "<group>"; };
+		09EA495917BE560B0026664E /* NSOperationQueue+OGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOperationQueue+OGExtensions.m"; sourceTree = "<group>"; };
+		09EA495A17BE560B0026664E /* NSString+OGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+OGExtensions.h"; sourceTree = "<group>"; };
+		09EA495B17BE560B0026664E /* NSString+OGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+OGExtensions.m"; sourceTree = "<group>"; };
+		09EA495C17BE560B0026664E /* OGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGExtensions.h; sourceTree = "<group>"; };
+		09EA495D17BE560B0026664E /* OGExtensionsCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGExtensionsCommon.h; sourceTree = "<group>"; };
+		09EA495E17BE560B0026664E /* OGExtensionsCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGExtensionsCommon.m; sourceTree = "<group>"; };
+		09EA495F17BE560B0026664E /* OGExtensionsGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGExtensionsGeometry.h; sourceTree = "<group>"; };
+		09EA496017BE560B0026664E /* OGExtensionsGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGExtensionsGeometry.m; sourceTree = "<group>"; };
+		09EA496117BE560B0026664E /* UIApplication+OGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+OGExtensions.h"; sourceTree = "<group>"; };
+		09EA496217BE560B0026664E /* UIApplication+OGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+OGExtensions.m"; sourceTree = "<group>"; };
+		09EA496317BE560B0026664E /* UIColor+OGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+OGExtensions.h"; sourceTree = "<group>"; };
+		09EA496417BE560B0026664E /* UIColor+OGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+OGExtensions.m"; sourceTree = "<group>"; };
+		09EA496517BE560B0026664E /* UIDevice+OGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+OGExtensions.h"; sourceTree = "<group>"; };
+		09EA496617BE560B0026664E /* UIDevice+OGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+OGExtensions.m"; sourceTree = "<group>"; };
+		09EA496917BE560B0026664E /* UIView+OGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+OGExtensions.h"; sourceTree = "<group>"; };
+		09EA496A17BE560B0026664E /* UIView+OGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+OGExtensions.m"; sourceTree = "<group>"; };
+		09EA496B17BE560B0026664E /* UIWindow+OGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+OGExtensions.h"; sourceTree = "<group>"; };
+		09EA496C17BE560B0026664E /* UIWindow+OGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+OGExtensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +117,10 @@
 		09EA486517BE49170026664E = {
 			isa = PBXGroup;
 			children = (
+				09EA48A217BE49890026664E /* OGExtensions.podspec */,
+				09EA48A017BE49890026664E /* LICENSE */,
+				09EA48A317BE49890026664E /* README.md */,
+				09EA48A117BE49890026664E /* OGExtensions */,
 				09EA487717BE49170026664E /* OGExtensionsProject */,
 				09EA489017BE49170026664E /* OGExtensionsProjectTests */,
 				09EA487017BE49170026664E /* Frameworks */,
@@ -107,10 +151,10 @@
 		09EA487717BE49170026664E /* OGExtensionsProject */ = {
 			isa = PBXGroup;
 			children = (
-				09EA488017BE49170026664E /* OGAppDelegate.h */,
-				09EA488117BE49170026664E /* OGAppDelegate.m */,
 				09EA488317BE49170026664E /* Images.xcassets */,
 				09EA487817BE49170026664E /* Supporting Files */,
+				09EA488017BE49170026664E /* OGAppDelegate.h */,
+				09EA488117BE49170026664E /* OGAppDelegate.m */,
 			);
 			path = OGExtensionsProject;
 			sourceTree = "<group>";
@@ -142,6 +186,38 @@
 				09EA489317BE49170026664E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09EA48A117BE49890026664E /* OGExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				09EA495017BE560B0026664E /* NSData+OGExtensions.h */,
+				09EA495117BE560B0026664E /* NSData+OGExtensions.m */,
+				09EA495217BE560B0026664E /* NSIndexPath+OGExtensions.h */,
+				09EA495317BE560B0026664E /* NSIndexPath+OGExtensions.m */,
+				09EA495617BE560B0026664E /* NSNotificationCenter+OGExtensions.h */,
+				09EA495717BE560B0026664E /* NSNotificationCenter+OGExtensions.m */,
+				09EA495817BE560B0026664E /* NSOperationQueue+OGExtensions.h */,
+				09EA495917BE560B0026664E /* NSOperationQueue+OGExtensions.m */,
+				09EA495A17BE560B0026664E /* NSString+OGExtensions.h */,
+				09EA495B17BE560B0026664E /* NSString+OGExtensions.m */,
+				09EA495C17BE560B0026664E /* OGExtensions.h */,
+				09EA495D17BE560B0026664E /* OGExtensionsCommon.h */,
+				09EA495E17BE560B0026664E /* OGExtensionsCommon.m */,
+				09EA495F17BE560B0026664E /* OGExtensionsGeometry.h */,
+				09EA496017BE560B0026664E /* OGExtensionsGeometry.m */,
+				09EA496117BE560B0026664E /* UIApplication+OGExtensions.h */,
+				09EA496217BE560B0026664E /* UIApplication+OGExtensions.m */,
+				09EA496317BE560B0026664E /* UIColor+OGExtensions.h */,
+				09EA496417BE560B0026664E /* UIColor+OGExtensions.m */,
+				09EA496517BE560B0026664E /* UIDevice+OGExtensions.h */,
+				09EA496617BE560B0026664E /* UIDevice+OGExtensions.m */,
+				09EA496917BE560B0026664E /* UIView+OGExtensions.h */,
+				09EA496A17BE560B0026664E /* UIView+OGExtensions.m */,
+				09EA496B17BE560B0026664E /* UIWindow+OGExtensions.h */,
+				09EA496C17BE560B0026664E /* UIWindow+OGExtensions.m */,
+			);
+			path = OGExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +316,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09EA497317BE560B0026664E /* OGExtensionsCommon.m in Sources */,
+				09EA497517BE560B0026664E /* UIApplication+OGExtensions.m in Sources */,
+				09EA496E17BE560B0026664E /* NSIndexPath+OGExtensions.m in Sources */,
+				09EA497117BE560B0026664E /* NSOperationQueue+OGExtensions.m in Sources */,
+				09EA497417BE560B0026664E /* OGExtensionsGeometry.m in Sources */,
 				09EA488217BE49170026664E /* OGAppDelegate.m in Sources */,
+				09EA497217BE560B0026664E /* NSString+OGExtensions.m in Sources */,
+				09EA497717BE560B0026664E /* UIDevice+OGExtensions.m in Sources */,
+				09EA497617BE560B0026664E /* UIColor+OGExtensions.m in Sources */,
+				09EA497A17BE560B0026664E /* UIWindow+OGExtensions.m in Sources */,
+				09EA496D17BE560B0026664E /* NSData+OGExtensions.m in Sources */,
+				09EA497917BE560B0026664E /* UIView+OGExtensions.m in Sources */,
+				09EA497017BE560B0026664E /* NSNotificationCenter+OGExtensions.m in Sources */,
 				09EA487E17BE49170026664E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +524,7 @@
 				09EA489C17BE49170026664E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09EA489D17BE49170026664E /* Build configuration list for PBXNativeTarget "OGExtensionsProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +533,7 @@
 				09EA489F17BE49170026664E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

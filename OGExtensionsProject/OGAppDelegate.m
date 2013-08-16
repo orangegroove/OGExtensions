@@ -7,6 +7,7 @@
 //
 
 #import "OGAppDelegate.h"
+#import "OGExtensions.h"
 
 @implementation OGAppDelegate
 
