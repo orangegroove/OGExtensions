@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "UIKit and Foundation extensions"
   s.homepage     = "https://github.com/jksk/OGExtensions"
   s.license      = :type => "MIT"
-  s.authors      = "Jesper Skrufve" => "jesper@orangegroove.net"
+  s.authors      = "Jesper" => "jesper@orangegroove.net"
   s.source       = :git => "https://github.com/jksk/OGExtensions.git", :tag => s.version.to_s
   s.platform     = :ios, "7.0"
   s.source_files = "OGExtensions"
