@@ -34,6 +34,16 @@ CGRect CGRectRetinaIntegral(CGRect rect)
 	return rect;
 }
 
+CGFloat CGRectGetHalfWidth(CGRect rect)
+{
+	return CGRectGetWidth(rect) / 2;
+}
+
+CGFloat CGRectGetHalfHeight(CGRect rect)
+{
+	return CGRectGetHeight(rect) / 2;
+}
+
 CGPoint CGRectGetCenter(CGRect rect)
 {
 	return CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));

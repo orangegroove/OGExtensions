@@ -32,7 +32,6 @@
 #define _radians(degrees)		(M_PI * (degrees) / 180.0)
 #define _degrees(radians)		(180.0 * (radians) / M_PI)
 #define weakify(object)			__weak typeof(object) w ## object = object
-#define OGLog(f, ...)			NSLog((@"\n%s[%d]\n" f),__func__,__LINE__,##__VA_ARGS__)
 
 #pragma mark - Types
 
@@ -40,27 +39,10 @@ typedef void	(^OGVoidBlock)(void);
 typedef void	(^OGSuccessBlock)(BOOL success);
 typedef id		(^OGObjectMapBlock)(id object);
 typedef BOOL	(^OGObjectMatchBlock)(id object);
-typedef struct
-{
-	BOOL			negative;
-	NSInteger		days;
-	NSInteger		hours;
-	NSInteger		minutes;
-	NSInteger		seconds;
-	NSTimeInterval	total;
-	
-} OGTimeInterval;
 
 #pragma mark - Functions
 
 /** @name Functions */
-
-/**
- 
- @param interval
- @return
- */
-OGTimeInterval	OGTimeIntervalMake(NSTimeInterval interval);
 
 /**
  Returns a random integer.

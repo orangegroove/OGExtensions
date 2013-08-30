@@ -26,27 +26,6 @@
 
 #define ARC4RANDOM_MAX	UINT32_MAX
 
-OGTimeInterval OGTimeIntervalMake(NSTimeInterval interval)
-{
-	static NSInteger SecondsPerMinute	= 60;
-	static NSInteger SecondsPerHour		= 3600;
-	static NSInteger SecondsPerDay		= 86400;
-	
-	OGTimeInterval ogInterval;
-	NSInteger time						= (NSInteger)fabs(interval);
-	ogInterval.days						= time / SecondsPerDay;
-	time							   -= ogInterval.days * SecondsPerDay;
-	ogInterval.hours					= time / SecondsPerHour;
-	time							   -= ogInterval.hours * SecondsPerHour;
-	ogInterval.minutes					= time / SecondsPerMinute;
-	time							   -= ogInterval.minutes * SecondsPerMinute;
-	ogInterval.seconds					= time;
-	ogInterval.negative					= interval < 0.;
-	ogInterval.total					= interval;
-	
-	return ogInterval;
-}
-
 NSInteger OGRandom(NSInteger low, NSInteger high)
 {
 	return (NSInteger)arc4random_uniform(high-low+1) + low;

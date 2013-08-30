@@ -24,6 +24,8 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 
+/** @name  */
+
 /**
  Returns a rectangle with values rounded to the nearest half point.
  @param rect The rectangle to modify
@@ -31,7 +33,21 @@
  */
 CG_EXTERN CGRect CGRectRetinaIntegral(CGRect rect);
 
-/** @name  */
+/** @name */
+
+/**
+ Returns half the width of a rectangle
+ @param rect The rectangle
+ @return Half the width
+ */
+CG_EXTERN CGFloat CGRectGetHalfWidth(CGRect rect);
+
+/**
+ Returns half the height of a rectangle
+ @param rect The rectangle
+ @return Half the height
+ */
+CG_EXTERN CGFloat CGRectGetHalfHeight(CGRect rect);
 
 /**
  Returns the center of the rectangle.
