@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "OGExtensions"
-  s.version      = "0.1.3"
+  s.version      = "0.1.4"
   s.summary      = "UIKit and Foundation extensions"
   s.homepage     = "https://github.com/OrangeGroove/OGExtensions"
   s.license      = { :type => "MIT" }
