@@ -52,4 +52,24 @@
  */
 - (NSDictionary *)httpParametersFromURLString;
 
+/**
+ 
+ */
+- (NSString *)stringRepeated:(NSUInteger)repeatCount;
+
+/**
+ 
+ */
+- (NSString *)substringFromString:(NSString *)string searchFromEnd:(BOOL)searchFromEnd;
+
+/**
+ 
+ */
+- (NSString *)substringToString:(NSString *)string searchFromEnd:(BOOL)searchFromEnd;
+
+/**
+ 
+ */
+- (NSString *)substringBetweenString:(NSString *)startString andString:(NSString *)endString searchFromEnd:(BOOL)searchFromEnd;
+
 @end

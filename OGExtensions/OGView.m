@@ -1,5 +1,5 @@
 //
-//  OGExtensions.h
+//  OGView.m
 //
 //  Created by Jesper <jesper@orangegroove.net>
 //
@@ -22,21 +22,31 @@
 //  IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#import "OGView.h"
 
-#import "OGExtensionsCommon.h"
-#import "OGExtensionsGeometry.h"
+@interface OGView ()
 
-#import "NSData+OGExtensions.h"
-#import "NSIndexPath+OGExtensions.h"
-#import "NSNotificationCenter+OGExtensions.h"
-#import "NSOperationQueue+OGExtensions.h"
-#import "NSString+OGExtensions.h"
-#import "UIApplication+OGExtensions.h"
-#import "UIColor+OGExtensions.h"
-#import "UIDevice+OGExtensions.h"
-#import "UIView+OGExtensions.h"
-#import "UIWindow+OGExtensions.h"
+@end
+@implementation OGView
 
-#import "OGLabel.h"
-#import "OGTextField.h"
+#pragma mark - Public
+
+- (void)didAddSubview:(UIView *)subview
+{
+	[super didAddSubview:subview];
+	
+	if (self.topmostView)
+		[self bringSubviewToFront:self.topmostView];
+}
+
+#pragma mark - Properties
+
+- (void)setTopmostView:(UIView *)topmostView
+{
+	NSAssert([self.subviews containsObject:topmostView], @"topmostView must be a subview");
+	
+	[self bringSubviewToFront:topmostView];
+	_topmostView = topmostView;
+}
+
+@end

@@ -1,5 +1,5 @@
 //
-//  OGExtensions.h
+//  NSDate+OGExtensions.m
 //
 //  Created by Jesper <jesper@orangegroove.net>
 //
@@ -22,21 +22,8 @@
 //  IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#import "NSDate+OGExtensions.h"
 
-#import "OGExtensionsCommon.h"
-#import "OGExtensionsGeometry.h"
+@implementation NSDate (OGExtensions)
 
-#import "NSData+OGExtensions.h"
-#import "NSIndexPath+OGExtensions.h"
-#import "NSNotificationCenter+OGExtensions.h"
-#import "NSOperationQueue+OGExtensions.h"
-#import "NSString+OGExtensions.h"
-#import "UIApplication+OGExtensions.h"
-#import "UIColor+OGExtensions.h"
-#import "UIDevice+OGExtensions.h"
-#import "UIView+OGExtensions.h"
-#import "UIWindow+OGExtensions.h"
-
-#import "OGLabel.h"
-#import "OGTextField.h"
+@end

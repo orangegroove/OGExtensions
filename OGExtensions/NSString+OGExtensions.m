@@ -83,6 +83,50 @@
 	return [NSDictionary dictionaryWithDictionary:params];
 }
 
+- (NSString *)stringRepeated:(NSUInteger)repeatCount
+{
+	if (!repeatCount)
+		return nil;
+	
+	if (repeatCount == 1)
+		return self;
+	
+	NSMutableString* string = [NSMutableString stringWithCapacity:self.length * repeatCount];
+	
+	for (NSUInteger i = 0; i < repeatCount; i++)
+		[string appendString:self];
+	
+	return [NSString stringWithString:string];
+}
 
+- (NSString *)substringFromString:(NSString *)string searchFromEnd:(BOOL)searchFromEnd
+{
+	return [self substringBetweenString:string andString:@"" searchFromEnd:searchFromEnd];
+}
+
+- (NSString *)substringToString:(NSString *)string searchFromEnd:(BOOL)searchFromEnd
+{
+	return [self substringBetweenString:@"" andString:string searchFromEnd:searchFromEnd];
+}
+
+- (NSString *)substringBetweenString:(NSString *)startString andString:(NSString *)endString searchFromEnd:(BOOL)searchFromEnd
+{
+	if (!self.length)
+		return nil;
+	
+	NSStringCompareOptions options	= searchFromEnd ? NSBackwardsSearch : 0;
+	NSRange start					= [self rangeOfString:startString options:options];
+	
+	if (!start.length)
+		start = NSMakeRange(0, 0);
+	
+	NSUInteger startEnd	= start.location + start.length;
+	NSRange end			= [self rangeOfString:endString options:options range:NSMakeRange(startEnd, self.length-startEnd)];
+	
+	if (!end.length)
+		end = NSMakeRange(startEnd, end.location - startEnd);
+	
+	return [self substringWithRange:NSMakeRange(startEnd, end.location - startEnd)];
+}
 
 @end

@@ -1,5 +1,5 @@
 //
-//  OGExtensions.h
+//  NSDate+OGExtensions.h
 //
 //  Created by Jesper <jesper@orangegroove.net>
 //
@@ -24,19 +24,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "OGExtensionsCommon.h"
-#import "OGExtensionsGeometry.h"
+@interface NSDate (OGExtensions)
 
-#import "NSData+OGExtensions.h"
-#import "NSIndexPath+OGExtensions.h"
-#import "NSNotificationCenter+OGExtensions.h"
-#import "NSOperationQueue+OGExtensions.h"
-#import "NSString+OGExtensions.h"
-#import "UIApplication+OGExtensions.h"
-#import "UIColor+OGExtensions.h"
-#import "UIDevice+OGExtensions.h"
-#import "UIView+OGExtensions.h"
-#import "UIWindow+OGExtensions.h"
+- (BOOL)isLaterThanDate:(NSDate *)date;
+- (BOOL)isEarlierThanDate:(NSDate *)date;
 
-#import "OGLabel.h"
-#import "OGTextField.h"
+@end

@@ -1,5 +1,5 @@
 //
-//  OGExtensions.h
+//  OGView.h
 //
 //  Created by Jesper <jesper@orangegroove.net>
 //
@@ -22,21 +22,10 @@
 //  IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-#import "OGExtensionsCommon.h"
-#import "OGExtensionsGeometry.h"
+@interface OGView : UIView
 
-#import "NSData+OGExtensions.h"
-#import "NSIndexPath+OGExtensions.h"
-#import "NSNotificationCenter+OGExtensions.h"
-#import "NSOperationQueue+OGExtensions.h"
-#import "NSString+OGExtensions.h"
-#import "UIApplication+OGExtensions.h"
-#import "UIColor+OGExtensions.h"
-#import "UIDevice+OGExtensions.h"
-#import "UIView+OGExtensions.h"
-#import "UIWindow+OGExtensions.h"
+@property (weak, nonatomic) UIView*	topmostView; // must be a subview
 
-#import "OGLabel.h"
-#import "OGTextField.h"
+@end

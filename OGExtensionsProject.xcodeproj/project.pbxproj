@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09082B0917F4B468007ACC45 /* OGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09082B0817F4B468007ACC45 /* OGLabel.m */; };
+		09082B0C17F4BCBB007ACC45 /* OGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 09082B0B17F4BCBB007ACC45 /* OGTextField.m */; };
+		09082B0F17F4C8E2007ACC45 /* OGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09082B0E17F4C8E2007ACC45 /* OGView.m */; };
+		09082B1217F4CC2A007ACC45 /* NSDate+OGExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09082B1117F4CC2A007ACC45 /* NSDate+OGExtensions.m */; };
 		09EA487217BE49170026664E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EA487117BE49170026664E /* Foundation.framework */; };
 		09EA487417BE49170026664E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EA487317BE49170026664E /* CoreGraphics.framework */; };
 		09EA487617BE49170026664E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EA487517BE49170026664E /* UIKit.framework */; };
@@ -44,6 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09082B0717F4B468007ACC45 /* OGLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGLabel.h; sourceTree = "<group>"; };
+		09082B0817F4B468007ACC45 /* OGLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGLabel.m; sourceTree = "<group>"; };
+		09082B0A17F4BCBB007ACC45 /* OGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGTextField.h; sourceTree = "<group>"; };
+		09082B0B17F4BCBB007ACC45 /* OGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGTextField.m; sourceTree = "<group>"; };
+		09082B0D17F4C8E2007ACC45 /* OGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGView.h; sourceTree = "<group>"; };
+		09082B0E17F4C8E2007ACC45 /* OGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGView.m; sourceTree = "<group>"; };
+		09082B1017F4CC2A007ACC45 /* NSDate+OGExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+OGExtensions.h"; sourceTree = "<group>"; };
+		09082B1117F4CC2A007ACC45 /* NSDate+OGExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+OGExtensions.m"; sourceTree = "<group>"; };
 		09EA486E17BE49170026664E /* OGExtensionsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OGExtensionsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EA487117BE49170026664E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09EA487317BE49170026664E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -193,6 +205,8 @@
 			children = (
 				09EA495017BE560B0026664E /* NSData+OGExtensions.h */,
 				09EA495117BE560B0026664E /* NSData+OGExtensions.m */,
+				09082B1017F4CC2A007ACC45 /* NSDate+OGExtensions.h */,
+				09082B1117F4CC2A007ACC45 /* NSDate+OGExtensions.m */,
 				09EA495217BE560B0026664E /* NSIndexPath+OGExtensions.h */,
 				09EA495317BE560B0026664E /* NSIndexPath+OGExtensions.m */,
 				09EA495617BE560B0026664E /* NSNotificationCenter+OGExtensions.h */,
@@ -216,6 +230,12 @@
 				09EA496A17BE560B0026664E /* UIView+OGExtensions.m */,
 				09EA496B17BE560B0026664E /* UIWindow+OGExtensions.h */,
 				09EA496C17BE560B0026664E /* UIWindow+OGExtensions.m */,
+				09082B0717F4B468007ACC45 /* OGLabel.h */,
+				09082B0817F4B468007ACC45 /* OGLabel.m */,
+				09082B0A17F4BCBB007ACC45 /* OGTextField.h */,
+				09082B0B17F4BCBB007ACC45 /* OGTextField.m */,
+				09082B0D17F4C8E2007ACC45 /* OGView.h */,
+				09082B0E17F4C8E2007ACC45 /* OGView.m */,
 			);
 			path = OGExtensions;
 			sourceTree = "<group>";
@@ -316,17 +336,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09082B0917F4B468007ACC45 /* OGLabel.m in Sources */,
 				09EA497317BE560B0026664E /* OGExtensionsCommon.m in Sources */,
 				09EA497517BE560B0026664E /* UIApplication+OGExtensions.m in Sources */,
 				09EA496E17BE560B0026664E /* NSIndexPath+OGExtensions.m in Sources */,
 				09EA497117BE560B0026664E /* NSOperationQueue+OGExtensions.m in Sources */,
 				09EA497417BE560B0026664E /* OGExtensionsGeometry.m in Sources */,
 				09EA488217BE49170026664E /* OGAppDelegate.m in Sources */,
+				09082B0C17F4BCBB007ACC45 /* OGTextField.m in Sources */,
 				09EA497217BE560B0026664E /* NSString+OGExtensions.m in Sources */,
 				09EA497717BE560B0026664E /* UIDevice+OGExtensions.m in Sources */,
 				09EA497617BE560B0026664E /* UIColor+OGExtensions.m in Sources */,
 				09EA497A17BE560B0026664E /* UIWindow+OGExtensions.m in Sources */,
+				09082B0F17F4C8E2007ACC45 /* OGView.m in Sources */,
 				09EA496D17BE560B0026664E /* NSData+OGExtensions.m in Sources */,
+				09082B1217F4CC2A007ACC45 /* NSDate+OGExtensions.m in Sources */,
 				09EA497917BE560B0026664E /* UIView+OGExtensions.m in Sources */,
 				09EA497017BE560B0026664E /* NSNotificationCenter+OGExtensions.m in Sources */,
 				09EA487E17BE49170026664E /* main.m in Sources */,
