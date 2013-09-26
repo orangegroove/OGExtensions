@@ -26,7 +26,14 @@
 
 @interface NSDate (OGExtensions)
 
+/**
+ 
+ */
 - (BOOL)isLaterThanDate:(NSDate *)date;
+
+/**
+ 
+ */
 - (BOOL)isEarlierThanDate:(NSDate *)date;
 
 @end

@@ -26,4 +26,14 @@
 
 @implementation NSDate (OGExtensions)
 
+- (BOOL)isLaterThanDate:(NSDate *)date
+{
+	return [self laterDate:date] == self;
+}
+
+- (BOOL)isEarlierThanDate:(NSDate *)date
+{
+	return [self earlierDate:date] == self;
+}
+
 @end
