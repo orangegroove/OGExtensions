@@ -111,3 +111,12 @@ CG_EXTERN CGPoint CGRectGetMidTop(CGRect rect);
  @return
  */
 CG_EXTERN CGPoint CGRectGetMidBottom(CGRect rect);
+
+/**
+ Return true if `size1' and `size2' are almost the same, false otherwise.
+ @param size1 One size.
+ @param size2 Another size.
+ @param diff Difference allowed.
+ @return 
+ */
+CG_EXTERN bool CGSizeFuzzyEqualToSize(CGSize size1, CGSize size2, CGFloat diff);

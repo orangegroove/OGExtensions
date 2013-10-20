@@ -88,3 +88,8 @@ CGPoint CGRectGetMidBottom(CGRect rect)
 {
 	return CGPointMake(CGRectGetMidX(rect), CGRectGetMaxY(rect));
 }
+
+bool CGSizeFuzzyEqualToSize(CGSize size1, CGSize size2, CGFloat diff)
+{
+	return fabsf(size1.width - size2.width) <= diff && fabsf(size1.height - size2.height) <= diff;
+}
