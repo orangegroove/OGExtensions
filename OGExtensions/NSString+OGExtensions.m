@@ -56,8 +56,8 @@
 	for (NSString* pair in pairs) {
 		
 		NSArray* item	= [pair componentsSeparatedByString:@"="];
-		NSString* key	= item.count > 0 ? item[0] : nil;
-		NSString* value	= item.count > 1 ? item[1] : @"";
+		NSString* key	= item.count > 0? item[0] : nil;
+		NSString* value	= item.count > 1? item[1] : @"";
 		
 		if (key.length) {
 			
@@ -114,7 +114,7 @@
 	if (!self.length)
 		return nil;
 	
-	NSStringCompareOptions options	= searchFromEnd ? NSBackwardsSearch : 0;
+	NSStringCompareOptions options	= searchFromEnd? NSBackwardsSearch : 0;
 	NSRange start					= [self rangeOfString:startString options:options];
 	
 	if (!start.length)

@@ -33,12 +33,12 @@
 	if (window && ![window isKindOfClass:NSClassFromString(@"_UIAlertNormalizingOverlayWindow").class])
 		return window;
 	
-	window = [UIApplication sharedApplication].delegate.window;
+	window = UIApplication.sharedApplication.delegate.window;
 	
 	if (window)
 		return window;
 	
-	return [UIApplication sharedApplication].windows[0];
+	return UIApplication.sharedApplication.windows[0];
 }
 
 @end

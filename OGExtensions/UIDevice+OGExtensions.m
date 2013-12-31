@@ -29,7 +29,7 @@
 - (NSInteger)systemVersionNumber
 {
 	NSString* numberString	= [[self.systemVersion componentsSeparatedByString:@"."] componentsJoinedByString:@""];
-	NSInteger version		= [numberString integerValue];
+	NSInteger version		= numberString.integerValue;
 	
 	if (version < 300)
 		version *= 10;

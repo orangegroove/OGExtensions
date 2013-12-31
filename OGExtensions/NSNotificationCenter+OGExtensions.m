@@ -28,7 +28,7 @@
 
 - (void)postNotificationOnMainQueue:(NSNotification *)notification
 {
-	if ([NSThread isMainThread])
+	if (NSThread.isMainThread)
 		[self postNotification:notification];
 	else
 		dispatch_async(dispatch_get_main_queue(), ^{
@@ -39,7 +39,7 @@
 
 - (void)postNotificationOnMainQueueName:(NSString *)aName object:(id)anObject
 {
-	if ([NSThread isMainThread])
+	if (NSThread.isMainThread)
 		[self postNotificationName:aName object:anObject];
 	else
 		dispatch_async(dispatch_get_main_queue(), ^{
@@ -50,7 +50,7 @@
 
 - (void)postNotificationOnMainQueueName:(NSString *)aName object:(id)anObject userInfo:(NSDictionary *)aUserInfo
 {
-	if ([NSThread isMainThread])
+	if (NSThread.isMainThread)
 		[self postNotificationName:aName object:anObject userInfo:aUserInfo];
 	else
 		dispatch_async(dispatch_get_main_queue(), ^{

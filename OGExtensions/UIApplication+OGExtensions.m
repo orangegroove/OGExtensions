@@ -28,22 +28,22 @@
 
 - (NSString *)bundleIdentifier
 {
-	return [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleIdentifierKey];
+	return [NSBundle.mainBundle objectForInfoDictionaryKey:(NSString *)kCFBundleIdentifierKey];
 }
 
 - (NSString *)displayName
 {
-	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+	return [NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 }
 
 - (CGFloat)releaseVersion
 {
-	return [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] floatValue];
+	return ((NSNumber *)[NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleShortVersionString"]).floatValue;
 }
 
 - (CGFloat)buildNumber
 {
-	return [[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey] floatValue];
+	return ((NSNumber *)[NSBundle.mainBundle objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey]).floatValue;
 }
 
 @end
