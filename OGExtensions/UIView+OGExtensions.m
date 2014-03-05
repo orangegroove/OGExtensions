@@ -50,13 +50,13 @@
 	
 	for (UIView* view in self.subviews) {
 		
-		UIView* responder = [self firstResponderSubview];
+		UIView* responder = view.firstResponderSubview;
 		
 		if (responder)
 			return responder;
 	}
 	
-	return self;
+	return nil;
 }
 
 - (void)roundCorners:(UIRectCorner)corners withRadius:(CGFloat)radius
