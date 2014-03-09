@@ -50,7 +50,7 @@ typedef BOOL	(^OGObjectMatchBlock)(id object);
  @param high The highest possible return value
  @return
  */
-NSInteger		OGRandom(NSInteger low, NSInteger high);
+int32_t		OGRandom(int32_t low, int32_t high);
 
 /**
  Returns a random double.

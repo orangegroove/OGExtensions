@@ -26,9 +26,12 @@
 
 #define ARC4RANDOM_MAX	UINT32_MAX
 
-NSInteger OGRandom(NSInteger low, NSInteger high)
+int32_t OGRandom(int32_t low, int32_t high)
 {
-	return (NSInteger)arc4random_uniform(high-low+1) + low;
+	if (low >= 0 && high <= INT32_MAX)
+		return arc4random_uniform(high - low + 1) + low;
+	
+	return arc4random() % (high - low + 1) + low;
 }
 
 double OGRandomDouble(double low, double high)
