@@ -27,15 +27,13 @@
 @interface OGLabel ()
 
 @property (assign, nonatomic) CGFloat	maximumFontSize;
+@property (assign, nonatomic) BOOL		dontUpdateMaximumFontSize;
 
 - (void)setFontWithSize:(CGFloat)size;
 - (void)adjustFontSizeToFitMultilineText;
 
 @end
 @implementation OGLabel
-{
-	BOOL	_selfSetFont;
-}
 
 #pragma mark - Lifecycle
 
@@ -60,8 +58,8 @@
 
 - (void)setFontWithSize:(CGFloat)size
 {
-	_selfSetFont	= YES;
-	self.font		= [self.font fontWithSize:size];
+	self.dontUpdateMaximumFontSize	= YES;
+	self.font						= [self.font fontWithSize:size];
 }
 
 - (void)adjustFontSizeToFitMultilineText
@@ -103,7 +101,7 @@
 {
 	if (self.numberOfLines != 1 && self.adjustsFontSizeToFitMultilineWidth && text.length)
 		[self adjustFontSizeToFitMultilineText];
-	else
+	else if (self.adjustsFontSizeToFitMultilineWidth)
 		self.font = [self.font fontWithSize:self.maximumFontSize];
 	
 	[super setText:text];
@@ -113,11 +111,13 @@
 {
 	[super setFont:font];
 	
-	if (_selfSetFont) {
+	if (self.dontUpdateMaximumFontSize) {
 		
-		self.maximumFontSize	= font.pointSize;
-		_selfSetFont			= NO;
+		self.dontUpdateMaximumFontSize = NO;
+		return;
 	}
+	
+	self.maximumFontSize = font.pointSize;
 }
 
 - (void)setAdjustsFontSizeToFitMultilineWidth:(BOOL)adjustsFontSizeToFitMultilineWidth
