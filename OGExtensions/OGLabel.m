@@ -30,7 +30,7 @@
 @property (assign, nonatomic) BOOL		dontUpdateMaximumFontSize;
 
 - (void)setFontWithSize:(CGFloat)size;
-- (void)adjustFontSizeToFitMultilineText;
+- (void)setFontSizeToFitMultilineText;
 
 @end
 @implementation OGLabel
@@ -62,7 +62,7 @@
 	self.font						= [self.font fontWithSize:size];
 }
 
-- (void)adjustFontSizeToFitMultilineText
+- (void)setFontSizeToFitMultilineText
 {
 	NSString* text		= self.text;
 	CGFloat fontSize	= self.maximumFontSize;
@@ -99,12 +99,12 @@
 
 - (void)setText:(NSString *)text
 {
+	[super setText:text];
+	
 	if (self.numberOfLines != 1 && self.adjustsFontSizeToFitMultilineWidth && text.length)
-		[self adjustFontSizeToFitMultilineText];
+		[self setFontSizeToFitMultilineText];
 	else if (self.adjustsFontSizeToFitMultilineWidth)
 		self.font = [self.font fontWithSize:self.maximumFontSize];
-	
-	[super setText:text];
 }
 
 - (void)setFont:(UIFont *)font
@@ -120,12 +120,22 @@
 	self.maximumFontSize = font.pointSize;
 }
 
+- (void)setTextInsets:(UIEdgeInsets)textInsets
+{
+	_textInsets = textInsets;
+	
+	if (self.numberOfLines != 1 && self.adjustsFontSizeToFitMultilineWidth && self.text.length)
+		[self setFontSizeToFitMultilineText];
+	else
+		[self setNeedsDisplay];
+}
+
 - (void)setAdjustsFontSizeToFitMultilineWidth:(BOOL)adjustsFontSizeToFitMultilineWidth
 {
 	_adjustsFontSizeToFitMultilineWidth = adjustsFontSizeToFitMultilineWidth;
 	
 	if (adjustsFontSizeToFitMultilineWidth && self.numberOfLines != 1 && self.text.length)
-		[self adjustsFontSizeToFitMultilineWidth];
+		[self setFontSizeToFitMultilineText];
 	else
 		self.font = [self.font fontWithSize:self.maximumFontSize];
 }
