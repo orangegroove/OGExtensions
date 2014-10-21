@@ -32,12 +32,12 @@
  @return The new color
  @note Useful for creating colors from web hex strings, i.e., 0xFF00EE
  */
-+ (UIColor *)colorWithRGBTriplet:(UInt32)triplet;
++ (UIColor *)og_colorWithRGBTriplet:(UInt32)triplet;
 
 /**
  Returns a random color with alpha 1.
  @return The new color
  */
-+ (UIColor *)randomColor;
++ (UIColor *)og_randomColor;
 
 @end

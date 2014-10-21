@@ -26,17 +26,21 @@
 
 @implementation UIWindow (OGExtensions)
 
-+ (UIWindow *)mainWindow
++ (UIWindow *)og_mainWindow
 {
-	UIWindow* window = [UIApplication sharedApplication].keyWindow;
+	UIWindow* window = UIApplication.sharedApplication.keyWindow;
 	
 	if (window && ![window isKindOfClass:NSClassFromString(@"_UIAlertNormalizingOverlayWindow").class])
-		return window;
+    {
+        return window;
+    }
 	
 	window = UIApplication.sharedApplication.delegate.window;
 	
 	if (window)
-		return window;
+    {
+        return window;
+    }
 	
 	return UIApplication.sharedApplication.windows[0];
 }

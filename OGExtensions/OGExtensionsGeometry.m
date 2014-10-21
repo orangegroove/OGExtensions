@@ -26,10 +26,10 @@
 
 CGRect CGRectRetinaIntegral(CGRect rect)
 {
-	rect.origin.x		= floorf(CGRectGetMinX  (rect) * 2) / 2;
-	rect.origin.y		= floorf(CGRectGetMinY  (rect) * 2) / 2;
-	rect.size.width		=  ceilf(CGRectGetWidth (rect) * 2) / 2;
-	rect.size.height	=  ceilf(CGRectGetHeight(rect) * 2) / 2;
+    rect.origin.x    = floorf(CGRectGetMinX (rect) * 2) / 2;
+    rect.origin.y    = floorf(CGRectGetMinY (rect) * 2) / 2;
+    rect.size.width  = ceilf(CGRectGetWidth (rect) * 2) / 2;
+    rect.size.height = ceilf(CGRectGetHeight(rect) * 2) / 2;
 	
 	return rect;
 }

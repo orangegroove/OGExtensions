@@ -27,7 +27,7 @@
 
 @implementation UIColor (OGExtensions)
 
-+ (UIColor *)colorWithRGBTriplet:(UInt32)triplet
++ (UIColor *)og_colorWithRGBTriplet:(UInt32)triplet
 {
 	int r = (triplet >> 16) & 0xFF;
 	int g = (triplet >> 8) & 0xFF;
@@ -36,7 +36,7 @@
 	return [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:1.f];
 }
 
-+ (UIColor *)randomColor
++ (UIColor *)og_randomColor
 {
 	return [UIColor colorWithRed:OGRandomDouble(0.f, 1.f) green:OGRandomDouble(0.f, 1.f) blue:OGRandomDouble(0.f, 1.f) alpha:1.f];
 }

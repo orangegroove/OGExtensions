@@ -30,6 +30,6 @@
  Returns the application's main window.
  @return The window
  */
-+ (UIWindow *)mainWindow;
++ (UIWindow *)og_mainWindow;
 
 @end

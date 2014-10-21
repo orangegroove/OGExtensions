@@ -30,14 +30,14 @@
  Posts a notification on the main queue.
  @param notification
  */
-- (void)postNotificationOnMainQueue:(NSNotification *)notification;
+- (void)og_postNotificationOnMainQueue:(NSNotification *)notification;
 
 /**
  
  @param aName
  @param anObject
  */
-- (void)postNotificationOnMainQueueName:(NSString *)aName object:(id)anObject;
+- (void)og_postNotificationOnMainQueueName:(NSString *)aName object:(id)anObject;
 
 /**
  
@@ -45,6 +45,6 @@
  @param anObject
  @param aUserInfo
  */
-- (void)postNotificationOnMainQueueName:(NSString *)aName object:(id)anObject userInfo:(NSDictionary *)aUserInfo;
+- (void)og_postNotificationOnMainQueueName:(NSString *)aName object:(id)anObject userInfo:(NSDictionary *)aUserInfo;
 
 @end

@@ -37,10 +37,12 @@
 
 #pragma mark - Lifecycle
 
-- (id)init
+- (instancetype)initWithFrame:(CGRect)frame
 {
-	if (self = [super init]) {
-		
+    self = [super initWithFrame:frame];
+    
+	if (self)
+    {
 		self.maximumFontSize = self.font.pointSize;
 	}
 	
@@ -58,32 +60,32 @@
 
 - (void)setFontWithSize:(CGFloat)size
 {
-	self.dontUpdateMaximumFontSize	= YES;
-	self.font						= [self.font fontWithSize:size];
+	self.dontUpdateMaximumFontSize = YES;
+	self.font                      = [self.font fontWithSize:size];
 }
 
 - (void)setFontSizeToFitMultilineText
 {
-	NSString* text		= self.text;
-	CGFloat fontSize	= self.maximumFontSize;
+    NSString* text   = self.text;
+    CGFloat fontSize = self.maximumFontSize;
 	
-	if (!text.length) {
-		
+	if (!text.length)
+    {
 		[self setFontWithSize:fontSize];
 		return;
 	}
 	
-	CGSize labelSize	= UIEdgeInsetsInsetRect(self.bounds, self.textInsets).size;
-	CGSize testSize		= labelSize;
-	testSize.height		= CGFLOAT_MAX;
+    CGSize labelSize = UIEdgeInsetsInsetRect(self.bounds, self.textInsets).size;
+    CGSize testSize  = labelSize;
+    testSize.height  = CGFLOAT_MAX;
 	
-	do {
+	do
+    {
+        UIFont* font = [self.font fontWithSize:fontSize];
+        CGSize size  = [text boundingRectWithSize:testSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: self.textColor} context:nil].size;
 		
-		UIFont* font	= [self.font fontWithSize:fontSize];
-		CGSize size		= [text boundingRectWithSize:testSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: self.textColor} context:nil].size;
-		
-		if (size.width <= labelSize.width && size.height <= labelSize.height) {
-			
+		if (size.width <= labelSize.width && size.height <= labelSize.height)
+        {
 			[self setFontWithSize:fontSize];
 			return;
 		}
@@ -102,17 +104,21 @@
 	[super setText:text];
 	
 	if (self.numberOfLines != 1 && self.adjustsFontSizeToFitMultilineWidth && text.length)
-		[self setFontSizeToFitMultilineText];
+    {
+        [self setFontSizeToFitMultilineText];
+    }
 	else if (self.adjustsFontSizeToFitMultilineWidth)
-		self.font = [self.font fontWithSize:self.maximumFontSize];
+    {
+        self.font = [self.font fontWithSize:self.maximumFontSize];
+    }
 }
 
 - (void)setFont:(UIFont *)font
 {
 	[super setFont:font];
 	
-	if (self.dontUpdateMaximumFontSize) {
-		
+	if (self.dontUpdateMaximumFontSize)
+    {
 		self.dontUpdateMaximumFontSize = NO;
 		return;
 	}
@@ -125,9 +131,13 @@
 	_textInsets = textInsets;
 	
 	if (self.numberOfLines != 1 && self.adjustsFontSizeToFitMultilineWidth && self.text.length)
-		[self setFontSizeToFitMultilineText];
+    {
+        [self setFontSizeToFitMultilineText];
+    }
 	else
-		[self setNeedsDisplay];
+    {
+        [self setNeedsDisplay];
+    }
 }
 
 - (void)setAdjustsFontSizeToFitMultilineWidth:(BOOL)adjustsFontSizeToFitMultilineWidth
@@ -135,9 +145,13 @@
 	_adjustsFontSizeToFitMultilineWidth = adjustsFontSizeToFitMultilineWidth;
 	
 	if (adjustsFontSizeToFitMultilineWidth && self.numberOfLines != 1 && self.text.length)
-		[self setFontSizeToFitMultilineText];
+    {
+        [self setFontSizeToFitMultilineText];
+    }
 	else
-		self.font = [self.font fontWithSize:self.maximumFontSize];
+    {
+        self.font = [self.font fontWithSize:self.maximumFontSize];
+    }
 }
 
 @end

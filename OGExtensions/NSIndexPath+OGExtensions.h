@@ -15,28 +15,28 @@
  @param section The section.
  @return The new indexpath.
  */
-- (NSIndexPath *)indexPathWithSection:(NSInteger)section;
+- (NSIndexPath *)og_indexPathWithSection:(NSInteger)section;
 
 /**
  Shorthand for modifying indexPath. Preserves the section.
  @param item The item
  @return The new indexpath.
  */
-- (NSIndexPath *)indexPathWithItem:(NSInteger)item;
+- (NSIndexPath *)og_indexPathWithItem:(NSInteger)item;
 
 /**
  Shorthand for modifying indexPath. Preserves the item.
  @param inc How much to increment or decrement the section.
  @return The new indexpath.
  */
-- (NSIndexPath *)indexPathByIncrementingSection:(NSInteger)inc;
+- (NSIndexPath *)og_indexPathByIncrementingSection:(NSInteger)inc;
 
 /**
  Shorthand for modifying indexPath. Preserves the section.
  @param inc How much to increment or decrement the item.
  @return The new indexpath.
  */
-- (NSIndexPath *)indexPathByIncrementingItem:(NSInteger)inc;
+- (NSIndexPath *)og_indexPathByIncrementingItem:(NSInteger)inc;
 
 /**
  Shorthand for modifying indexPath.
@@ -44,6 +44,6 @@
  @param incItem How much to increment or decrement the item.
  @return The new indexpath.
  */
-- (NSIndexPath *)indexPathByIncrementingSection:(NSInteger)incSection andItem:(NSInteger)incItem;
+- (NSIndexPath *)og_indexPathByIncrementingSection:(NSInteger)incSection andItem:(NSInteger)incItem;
 
 @end

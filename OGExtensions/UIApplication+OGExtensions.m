@@ -26,22 +26,22 @@
 
 @implementation UIApplication (OGExtensions)
 
-- (NSString *)bundleIdentifier
+- (NSString *)og_bundleIdentifier
 {
 	return [NSBundle.mainBundle objectForInfoDictionaryKey:(NSString *)kCFBundleIdentifierKey];
 }
 
-- (NSString *)displayName
+- (NSString *)og_displayName
 {
 	return [NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 }
 
-- (CGFloat)releaseVersion
+- (CGFloat)og_releaseVersion
 {
 	return ((NSNumber *)[NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleShortVersionString"]).floatValue;
 }
 
-- (CGFloat)buildNumber
+- (CGFloat)og_buildNumber
 {
 	return ((NSNumber *)[NSBundle.mainBundle objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey]).floatValue;
 }

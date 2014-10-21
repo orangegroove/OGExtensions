@@ -32,6 +32,6 @@
  @note From http://stackoverflow.com/a/9084784
  @note Can be used to serialize APNS device token.
  */
-- (NSString *)hexadecimalString;
+- (NSString *)og_hexadecimalString;
 
 @end

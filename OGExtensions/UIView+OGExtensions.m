@@ -27,56 +27,64 @@
 
 @implementation UIView (OGExtensions)
 
-- (id)subviewWithClassname:(NSString *)classname
+- (id)og_subviewWithClassname:(NSString *)classname
 {
-	for (UIView* view in self.subviews) {
-		
+	for (UIView* view in self.subviews)
+    {
 		if ([classname isEqualToString:NSStringFromClass(view.class)])
-			return view;
+        {
+            return view;
+        }
 		
-		UIView* subview = [view subviewWithClassname:classname];
+		UIView* subview = [view og_subviewWithClassname:classname];
 		
 		if (subview)
-			return subview;
+        {
+            return subview;
+        }
 	}
 	
 	return nil;
 }
 
-- (UIView *)firstResponderSubview
+- (UIView *)og_firstResponderSubview
 {
-	if (self.isFirstResponder)
-		return self;
+	if (self.isFirstResponder) return self;
 	
-	for (UIView* view in self.subviews) {
+	for (UIView* view in self.subviews)
+    {
 		
-		UIView* responder = view.firstResponderSubview;
+		UIView* responder = view.og_firstResponderSubview;
 		
 		if (responder)
-			return responder;
+        {
+            return responder;
+        }
 	}
 	
 	return nil;
 }
 
-- (void)roundCorners:(UIRectCorner)corners withRadius:(CGFloat)radius
+- (void)og_roundCorners:(UIRectCorner)corners withRadius:(CGFloat)radius
 {
-	CGSize radii		= CGSizeMake(radius, radius);
-	CAShapeLayer* mask	= [CAShapeLayer layer];
-	UIBezierPath* path	= [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:radii];
-	mask.path			= path.CGPath;
-	self.layer.mask		= mask;
+    CGSize radii       = CGSizeMake(radius, radius);
+    CAShapeLayer* mask = [CAShapeLayer layer];
+    UIBezierPath* path = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:radii];
+    mask.path          = path.CGPath;
+    self.layer.mask    = mask;
 }
 
-- (void)addSubviewWithPreservedScreenPosition:(UIView *)view
+- (void)og_addSubviewWithPreservedScreenPosition:(UIView *)view
 {
 	if (view.superview)
-		view.center = [self convertPoint:view.center fromView:view.superview];
+    {
+        view.center = [self convertPoint:view.center fromView:view.superview];
+    }
 	
 	[self addSubview:view];
 }
 
-- (void)setFrameSafely:(CGRect)frame
+- (void)og_setFrameSafely:(CGRect)frame
 {
 	self.bounds	= (CGRect){0.f, 0.f, frame.size};
 	self.center	= CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));

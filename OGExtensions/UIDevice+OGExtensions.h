@@ -30,6 +30,6 @@
  Returns the iOS version as an integer. A major version is in the hundreds. E.g., iOS 6.1 is 610.
  @return The iOS version
  */
-- (NSInteger)systemVersionNumber;
+- (NSInteger)og_systemVersionNumber;
 
 @end

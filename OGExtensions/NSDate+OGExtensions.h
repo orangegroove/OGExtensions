@@ -29,11 +29,11 @@
 /**
  
  */
-- (BOOL)isLaterThanDate:(NSDate *)date;
+- (BOOL)og_isLaterThanDate:(NSDate *)date;
 
 /**
  
  */
-- (BOOL)isEarlierThanDate:(NSDate *)date;
+- (BOOL)og_isEarlierThanDate:(NSDate *)date;
 
 @end

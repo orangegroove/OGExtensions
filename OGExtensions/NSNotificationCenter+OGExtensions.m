@@ -26,37 +26,49 @@
 
 @implementation NSNotificationCenter (OGExtensions)
 
-- (void)postNotificationOnMainQueue:(NSNotification *)notification
+- (void)og_postNotificationOnMainQueue:(NSNotification *)notification
 {
 	if (NSThread.isMainThread)
-		[self postNotification:notification];
+    {
+        [self postNotification:notification];
+    }
 	else
-		dispatch_async(dispatch_get_main_queue(), ^{
-			
-			[self postNotification:notification];
-		});
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self postNotification:notification];
+        });
+    }
 }
 
-- (void)postNotificationOnMainQueueName:(NSString *)aName object:(id)anObject
+- (void)og_postNotificationOnMainQueueName:(NSString *)aName object:(id)anObject
 {
 	if (NSThread.isMainThread)
-		[self postNotificationName:aName object:anObject];
+    {
+        [self postNotificationName:aName object:anObject];
+    }
 	else
-		dispatch_async(dispatch_get_main_queue(), ^{
-			
-			[self postNotificationName:aName object:anObject];
-		});
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self postNotificationName:aName object:anObject];
+        });
+    }
 }
 
-- (void)postNotificationOnMainQueueName:(NSString *)aName object:(id)anObject userInfo:(NSDictionary *)aUserInfo
+- (void)og_postNotificationOnMainQueueName:(NSString *)aName object:(id)anObject userInfo:(NSDictionary *)aUserInfo
 {
 	if (NSThread.isMainThread)
-		[self postNotificationName:aName object:anObject userInfo:aUserInfo];
+    {
+        [self postNotificationName:aName object:anObject userInfo:aUserInfo];
+    }
 	else
-		dispatch_async(dispatch_get_main_queue(), ^{
-			
-			[self postNotificationName:aName object:anObject userInfo:aUserInfo];
-		});
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self postNotificationName:aName object:anObject userInfo:aUserInfo];
+        });
+    }
 }
 
 @end

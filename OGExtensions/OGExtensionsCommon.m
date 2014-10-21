@@ -29,7 +29,9 @@
 int32_t OGRandom(int32_t low, int32_t high)
 {
 	if (low >= 0 && high <= INT32_MAX)
-		return arc4random_uniform(high - low + 1) + low;
+    {
+        return arc4random_uniform(high - low + 1) + low;
+    }
 	
 	return arc4random() % (high - low + 1) + low;
 }

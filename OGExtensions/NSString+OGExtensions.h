@@ -31,45 +31,45 @@
  @return The normalized string
  @note Useful for string matching (e.g., for searching a Core Data store).
  */
-- (NSString *)normalizedString;
+- (NSString *)og_normalizedString;
 
 /**
  Encodes a string for HTTP operations.
  @return The encoded string
  */
-- (NSString *)URLEncodedString;
+- (NSString *)og_urlEncodedString;
 
 /**
  Decodes a string for HTTP operations.
  @return The decoded string
  */
-- (NSString *)URLDecodedString;
+- (NSString *)og_urlDecodedString;
 
 /**
  Parses parameters from a URL.
  @return The parsed parameters
  @note Empty values are stored as zero-length strings.
  */
-- (NSDictionary *)httpParametersFromURLString;
+- (NSDictionary *)og_httpParametersFromURLString;
 
 /**
  
  */
-- (NSString *)stringRepeated:(NSUInteger)repeatCount;
+- (NSString *)og_stringRepeated:(NSUInteger)repeatCount;
 
 /**
  
  */
-- (NSString *)substringFromString:(NSString *)string searchFromEnd:(BOOL)searchFromEnd;
+- (NSString *)og_substringFromString:(NSString *)string searchFromEnd:(BOOL)searchFromEnd;
 
 /**
  
  */
-- (NSString *)substringToString:(NSString *)string searchFromEnd:(BOOL)searchFromEnd;
+- (NSString *)og_substringToString:(NSString *)string searchFromEnd:(BOOL)searchFromEnd;
 
 /**
  
  */
-- (NSString *)substringBetweenString:(NSString *)startString andString:(NSString *)endString searchFromEnd:(BOOL)searchFromEnd;
+- (NSString *)og_substringBetweenString:(NSString *)startString andString:(NSString *)endString searchFromEnd:(BOOL)searchFromEnd;
 
 @end

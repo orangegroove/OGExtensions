@@ -26,13 +26,15 @@
 
 @implementation UIDevice (OGExtensions)
 
-- (NSInteger)systemVersionNumber
+- (NSInteger)og_systemVersionNumber
 {
-	NSString* numberString	= [[self.systemVersion componentsSeparatedByString:@"."] componentsJoinedByString:@""];
-	NSInteger version		= numberString.integerValue;
+    NSString* numberString = [[self.systemVersion componentsSeparatedByString:@"."] componentsJoinedByString:@""];
+    NSInteger version      = numberString.integerValue;
 	
 	if (version < 300)
-		version *= 10;
+    {
+        version *= 10;
+    }
 	
 	return version;
 }

@@ -26,18 +26,19 @@
 
 @implementation NSData (OGExtensions)
 
-- (NSString *)hexadecimalString
+- (NSString *)og_hexadecimalString
 {
 	const unsigned char* buffer = self.bytes;
 	NSUInteger length			= self.length;
 	
-	if (!buffer || !length)
-		return nil;
+	if (!buffer || !length) return nil;
 	
 	NSMutableString* string	= [NSMutableString stringWithCapacity:length*2];
 	
 	for (NSUInteger i = 0; i < length; i++)
-		[string appendFormat:@"%02x", buffer[i]];
+    {
+        [string appendFormat:@"%02x", buffer[i]];
+    }
 	
 	return [NSString stringWithString:string];
 }

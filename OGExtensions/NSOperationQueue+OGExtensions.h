@@ -30,19 +30,19 @@
  An application-level queue.
  @return The queue
  */
-+ (instancetype)sharedQueue;
++ (instancetype)og_sharedQueue;
 
 /**
  Adds an operation that is is performed last, assuming no special dependencies.
  @param fifoOperation The operation to add
  @note This is the behavior of addOperation:, aliased only for symmetry.
  */
-- (void)addFIFOOperation:(NSOperation *)fifoOperation;
+- (void)og_addFIFOOperation:(NSOperation *)fifoOperation;
 
 /**
  Adds an operation that is is performed first, assuming no special dependencies.
  @param lifoOperation The operation to add
  */
-- (void)addLIFOOperation:(NSOperation *)lifoOperation;
+- (void)og_addLIFOOperation:(NSOperation *)lifoOperation;
 
 @end

@@ -22,9 +22,9 @@
 //  IN THE SOFTWARE.
 //
 
-#import <CoreGraphics/CoreGraphics.h>
+@import CoreGraphics;
 
-/** @name  */
+/** @name Geometry */
 
 /**
  Returns a rectangle with values rounded to the nearest half point.

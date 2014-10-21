@@ -24,9 +24,6 @@
 
 #import "OGView.h"
 
-@interface OGView ()
-
-@end
 @implementation OGView
 
 #pragma mark - Public
@@ -36,7 +33,9 @@
 	[super didAddSubview:subview];
 	
 	if (self.topmostView)
-		[self bringSubviewToFront:self.topmostView];
+    {
+        [self bringSubviewToFront:self.topmostView];
+    }
 }
 
 #pragma mark - Properties

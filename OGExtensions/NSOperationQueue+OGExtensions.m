@@ -26,10 +26,10 @@
 
 @implementation NSOperationQueue (OGExtensions)
 
-+ (instancetype)sharedQueue
++ (instancetype)og_sharedQueue
 {
-	static NSOperationQueue* instance	= nil;
-	static dispatch_once_t token		= 0;
+    static NSOperationQueue* instance = nil;
+    static dispatch_once_t token      = 0;
 	
 	dispatch_once(&token, ^{
 		
@@ -39,7 +39,7 @@
 	return instance;
 }
 
-- (void)addFIFOOperation:(NSOperation *)fifoOperation
+- (void)og_addFIFOOperation:(NSOperation *)fifoOperation
 {
 	[self addOperation:fifoOperation];
 }
@@ -51,15 +51,16 @@
 	[self setSuspended:YES];
 	
 	for (NSOperation* operation in self.operations)
-		if (!operation.isExecuting) {
-			
-			[operation addDependency:lifoOperation];
-			break;
-		}
+    {
+        if (!operation.isExecuting)
+        {
+            [operation addDependency:lifoOperation];
+            break;
+        }
+    }
 	
 	[self addOperation:lifoOperation];
 	[self setSuspended:suspended];
 }
-
 
 @end

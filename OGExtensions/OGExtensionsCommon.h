@@ -26,19 +26,12 @@
 
 #pragma mark - Macros
 
-#define MIN3(x,y,z)				MIN(MIN(x,y),z)
-#define MAX3(x,y,z)				MAX(MAX(x,y),z)
-#define MID(min,x,max)			MAX(MIN(x, max), min)
-#define _radians(degrees)		(M_PI * (degrees) / 180.0)
-#define _degrees(radians)		(180.0 * (radians) / M_PI)
-#define weakify(object)			__weak typeof(object) w ## object = object
-
-#pragma mark - Types
-
-typedef void	(^OGVoidBlock)(void);
-typedef void	(^OGSuccessBlock)(BOOL success);
-typedef id		(^OGObjectMapBlock)(id object);
-typedef BOOL	(^OGObjectMatchBlock)(id object);
+#define MIN3(x,y,z)       MIN(MIN(x,y),z)
+#define MAX3(x,y,z)       MAX(MAX(x,y),z)
+#define MID(min,x,max)    MAX(MIN(x, max), min)
+#define _radians(degrees) M_PI * (degrees) / 180.0)
+#define _degrees(radians) (180.0 * (radians) / M_PI)
+#define weakify(object)   __weak typeof(object) w ## object = object
 
 #pragma mark - Functions
 
@@ -50,7 +43,7 @@ typedef BOOL	(^OGObjectMatchBlock)(id object);
  @param high The highest possible return value
  @return
  */
-int32_t		OGRandom(int32_t low, int32_t high);
+int32_t OGRandom(int32_t low, int32_t high);
 
 /**
  Returns a random double.
@@ -58,7 +51,7 @@ int32_t		OGRandom(int32_t low, int32_t high);
  @param high The highest possible return value
  @return
  */
-double			OGRandomDouble(double low, double high);
+double OGRandomDouble(double low, double high);
 
 /**
  Returns a rounded double
@@ -66,4 +59,4 @@ double			OGRandomDouble(double low, double high);
  @param Rounding precision
  @return
  */
-double			OGRound(double number, int decimals);
+double OGRound(double number, int decimals);

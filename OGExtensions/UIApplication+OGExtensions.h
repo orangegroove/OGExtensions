@@ -30,24 +30,24 @@
  Returns the application's bundle identifier.
  @return The identifier
  */
-- (NSString *)bundleIdentifier;
+- (NSString *)og_bundleIdentifier;
 
 /**
  Returns the application's display name.
  @return The name
  */
-- (NSString *)displayName;
+- (NSString *)og_displayName;
 
 /**
  Returns the application's version.
  @return The version
  */
-- (CGFloat)releaseVersion;
+- (CGFloat)og_releaseVersion;
 
 /**
  Returns the application's build number.
  @return The build number
  */
-- (CGFloat)buildNumber;
+- (CGFloat)og_buildNumber;
 
 @end

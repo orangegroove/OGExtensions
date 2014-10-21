@@ -26,7 +26,14 @@
 
 @interface OGLabel : UILabel
 
-@property (assign, nonatomic) UIEdgeInsets	textInsets;
-@property (assign, nonatomic) BOOL			adjustsFontSizeToFitMultilineWidth;
+/**
+ 
+ */
+@property (assign, nonatomic) UIEdgeInsets textInsets;
+
+/**
+ 
+ */
+@property (assign, nonatomic) BOOL adjustsFontSizeToFitMultilineWidth;
 
 @end

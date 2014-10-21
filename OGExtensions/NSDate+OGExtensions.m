@@ -26,12 +26,12 @@
 
 @implementation NSDate (OGExtensions)
 
-- (BOOL)isLaterThanDate:(NSDate *)date
+- (BOOL)og_isLaterThanDate:(NSDate *)date
 {
 	return [self laterDate:date] == self;
 }
 
-- (BOOL)isEarlierThanDate:(NSDate *)date
+- (BOOL)og_isEarlierThanDate:(NSDate *)date
 {
 	return [self earlierDate:date] == self;
 }
