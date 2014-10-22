@@ -44,7 +44,7 @@
 	[self addOperation:fifoOperation];
 }
 
-- (void)addLIFOOperation:(NSOperation *)lifoOperation
+- (void)og_addLIFOOperation:(NSOperation *)lifoOperation
 {
 	BOOL suspended = self.isSuspended;
 	
